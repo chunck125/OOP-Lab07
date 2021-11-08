@@ -20,28 +20,10 @@ public final class TestSportByStaticInnerClass {
      *            ignored
      */
     public static void main(final String... args) {
-        /*
-         * TODO: create 3 sport social network users (SportSocialNetworkUser):
-         * 
-         * Davide Cassani , dcassani, 53
-         * 
-         * Bernie Ecclestone, becclestone, 83
-         * 
-         * Fernando Alonso, falonso, 34
-         */
         final SportSocialNetworkUserImpl<User> dcassani = new SportSocialNetworkUserImpl<> ("Davide", "Cassani", "dcassani", 53);
         final SportSocialNetworkUserImpl<User> becclestone = new SportSocialNetworkUserImpl<> ("Bernie", "Ecclestone", "becclestone", 83);
         final SportSocialNetworkUserImpl<User> falonso = new SportSocialNetworkUserImpl<> ("Fernando", "Alonso", "falonso", 34);
 
-        /*
-         * TODO: alonso is a fan of soccer and bike and practices F1: 
-         * add these sports to Alonso
-         * 
-         * falonso.addSport(SportSocialNetworkUserImpl.F1);
-         * 
-         * ...
-         */
-        
         falonso.addSport(SportSocialNetworkUserImpl.F1);
         falonso.addSport(SportSocialNetworkUserImpl.BIKE);
         falonso.addSport(SportSocialNetworkUserImpl.SOCCER);

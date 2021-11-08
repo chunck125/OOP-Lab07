@@ -47,8 +47,6 @@ public final class TestAnonymousComparator {
         return true;
     }
     
-    //static Comparator<User> byAge;
-    
     /**
      * @param args
      *            ignored
@@ -88,12 +86,7 @@ public final class TestAnonymousComparator {
         };
         
         denzelUsers.sort(byAge);
-        
-        // TODO
-        /*
-         * expected Result
-         */
-        
+                
         List<User> expectedResult = new ArrayList<>();
         expectedResult.add(pverdi);
         expectedResult.add(mrossi);
@@ -124,10 +117,6 @@ public final class TestAnonymousComparator {
         
         rossiUsers.sort(byAge.reversed());
         
-        // TODO
-        /*
-         * expected Result
-         */
         expectedResult = new ArrayList<>();
         expectedResult.add(dwashington);
         expectedResult.add(kbacon);

@@ -50,9 +50,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     public static final Sport BIKE;
 
-    /*
-     * TODO: initialize properly these sports
-     */
     static {
         SOCCER = new Sport("Soccer");
         F1 = new Sport("F1");
@@ -100,12 +97,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         this.sports = new HashSet<>();
     }
 
-    /*
-     * [METHODS]
-     * 
-     * Implements all the methods below
-     */
-
     /**
      * Add a new sport followed by this user: if the user already likes or does
      * the sport, nothing happens.
@@ -131,13 +122,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
     public boolean hasSport(final Sport s) {
     	return sports.contains(s);
     }
-
-    /*
-     * TODO
-     * 
-     * Complete the definition of this static inner class defining a Sport along
-     * with its bare name.
-     */
+    
     public static final class Sport {
     	
     	private final String nome;
@@ -146,12 +131,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
     		this.nome = nome;
     	}
     	
-        /*
-         * TODO
-         * 
-         * Redefine equals so that two sports are equal only if they feature the
-         * very same name. Remember that you must also redefine hashCode()!
-         */
         @Override
         public boolean equals(final Object o) {
             if (this == o) {
