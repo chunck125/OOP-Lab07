@@ -21,6 +21,8 @@ import it.unibo.oop.lab.socialnetwork.User;
  * (Refer to: 13-Advanced-Mechanisms.pdf, slide 39)
  * 
  */
+
+
 public final class TestAnonymousComparator {
 
     private TestAnonymousComparator() { }
@@ -44,7 +46,7 @@ public final class TestAnonymousComparator {
         }
         return true;
     }
-
+    
     /**
      * @param args
      *            ignored

@@ -115,7 +115,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public void addSport(final Sport sport) {
-
+    	if(!hasSport(sport)) {
+    		sports.add(sport);
+    	}
     }
 
     /**
@@ -127,7 +129,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public boolean hasSport(final Sport s) {
-        return false;
+    	return sports.contains(s);
     }
 
     /*
