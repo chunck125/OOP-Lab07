@@ -47,6 +47,8 @@ public final class TestAnonymousComparator {
         return true;
     }
     
+    //static Comparator<User> byAge;
+    
     /**
      * @param args
      *            ignored
@@ -79,16 +81,19 @@ public final class TestAnonymousComparator {
          * REFER TO LESSON 13-Advanced-Mechanisms.pdf, slide 41
          */
         
-        Collections.sort(denzelUsers, new Comparator<User>() {
+        var byAge = new Comparator<User>() {
         	public int compare(User a, User b) {
-        		return a.getAge() - b.getAge();
+        		return Integer.compare(a.getAge(), b.getAge());
         	}
-        });
+        };
+        
+        denzelUsers.sort(byAge);
         
         // TODO
         /*
          * expected Result
          */
+        
         List<User> expectedResult = new ArrayList<>();
         expectedResult.add(pverdi);
         expectedResult.add(mrossi);
@@ -117,11 +122,7 @@ public final class TestAnonymousComparator {
          * class Collections
          */
         
-        Collections.sort(rossiUsers, new Comparator<User>() {
-        	public int compare(User a, User b) {
-        		return b.getAge() - a.getAge();
-        	}
-        });
+        rossiUsers.sort(byAge.reversed());
         
         // TODO
         /*
